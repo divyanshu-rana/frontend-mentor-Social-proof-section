@@ -1,0 +1,234 @@
+:root {
+  /* Primary */
+  --Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+  --Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Magenta: hsla(300, 24%, 96%, 0.911);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* common for whole design */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Spartan", sans-serif;
+  background: url("../images/bg-pattern-top-desktop.svg") no-repeat,
+    url("../images/bg-pattern-bottom-desktop.svg") no-repeat,
+    linear-gradient(to right, hsla(0, 0%, 98%, 0.678), hsla(0, 0%, 97%, 0.63));
+  background-position: 1% 0%, 100% 99%;
+  background-size: 36%, 73%;
+}
+h1 {
+  font-weight: 700;
+  color: var(--Dark-Magenta);
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+}
+p {
+  color: var(--White);
+  line-height: 1.5;
+}
+
+/* container-main */
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+  height: 100vh;
+  display: grid;
+  row-gap: 50px;
+  padding: 5vh 0;
+}
+
+/* container-top */
+
+.container-top {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 75%;
+}
+
+/* container-left */
+
+.container-left {
+  flex: 0 0 50%;
+  width: 20vw;
+  height: 100%;
+  padding-right: 3.5rem;
+}
+.under-h1 {
+  color: var(--Grayish-Magenta);
+}
+
+/* container-right */
+
+.container-right {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.right-card {
+  background-color: var(--Light-Magenta);
+  width: 80%;
+  padding: 1rem;
+  border-radius: 5px;
+  height: 55px;
+}
+.right-card:nth-of-type(1) {
+  align-self: flex-start;
+}
+.right-card:nth-of-type(2) {
+  align-self: center;
+}
+.right-card:nth-of-type(3) {
+  align-self: flex-end;
+}
+.container-rc {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-rated {
+  color: var(--Dark-Magenta);
+  font-weight: 700;
+}
+.container-star {
+  font-size: 12px;
+}
+.container-rc h4 {
+  font-size: 12px;
+}
+
+/* container-bottom */
+
+.container-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.container-bc {
+  display: flex;
+  margin-bottom: 20px;
+}
+.bottom-card {
+  background-color: var(--Dark-Magenta);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 5rem;
+  height: 35vh;
+  padding-top: 2.5rem;
+  flex: 0 0 30%;
+  justify-content: space-between;
+}
+.bottom-card:nth-of-type(1) {
+  align-self: flex-start;
+}
+.bottom-card:nth-of-type(2) {
+  align-self: center;
+}
+.bottom-card:nth-of-type(3) {
+  align-self: flex-end;
+}
+.profile-img {
+  width: 20%;
+  border-radius: 100%;
+}
+.container-name {
+  color: var(--White);
+  font-size: 14px;
+  margin-left: 20px;
+  margin-top: 8px;
+}
+.buyer {
+  color: var(--Soft-Pink);
+  font-size: 12px;
+}
+.container-review {
+  font-size: 12px;
+}
+
+/* attribution */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 1350px) {
+  .container {
+    max-width: 1012px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    max-width: 1012px;
+    height: 100vh;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .container {
+    flex-direction: column;
+    height: unset;
+    min-height: 100vh;
+    width: 90%;
+  }
+  .container-top {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .container-left {
+    text-align: center;
+    padding-right: unset;
+    row-gap: 30px;
+    flex: unset;
+    width: unset;
+  }
+  .under-h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .container-right {
+    row-gap: 20px;
+    margin-top: 20px;
+    flex: unset;
+    width: unset;
+  }
+
+  .right-card {
+    width: 100%;
+    flex-direction: column;
+    min-height: 55px;
+  }
+  .right-card {
+    align-self: center !important;
+  }
+  .container-rc {
+    flex-direction: column;
+  }
+
+  .container-bottom {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .bottom-card {
+    width: unset;
+    flex: unset;
+    height: unset;
+  }
+  .bottom-card {
+    align-self: unset;
+  }
+}
